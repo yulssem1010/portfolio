@@ -1,0 +1,106 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  left: 0; top: 0;
+  background: #000 ;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* ---------------------------------------------------------------- */
+/* background */
+.background {
+  width: 1145px;
+  /* height: 100%; */
+  height: 1080px;
+  position: absolute;
+  left: 50%; top: 0;
+  transform: translateX(-50%);
+  background: url(../img/bg_move.png) no-repeat center center;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------- */
+/* elevator */
+.elevator {
+  position: absolute;
+  left: 334px; bottom: 130px;
+}
+
+.ele_up {
+  position: absolute;
+  left: 572px; bottom: 929px;
+  animation: sizeAni 1s infinite linear;
+}
+
+@keyframes sizeAni {
+  0% {
+    transform: scale(1.0);
+  }
+
+  70% {
+    transform: scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* effect */
+.effect_big {
+  position: absolute;
+  left: 94px; bottom: 100px;
+  animation: effectBicAni 1s infinite linear;
+}
+
+.effect_bigm {
+  position: absolute;
+  left: 200px; bottom: 100px;
+  animation: effectBicAni 0.5s infinite linear;
+}
+
+@keyframes effectBicAni {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+.effect_small {
+  position: absolute;
+  left: 94px; bottom: 100px;
+  animation: effectSmallAni 0.3s infinite linear;
+}
+
+@keyframes effectSmallAni {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */

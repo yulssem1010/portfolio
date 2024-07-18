@@ -1,0 +1,381 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: fixed;
+  left: 0; top: 0;
+  background: #000 ;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.comment p {
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- */
+/* background */
+.background {
+  width: 1145px;
+  /* height: 100%; */
+  height: 1080px;
+  position: absolute;
+  left: 50%; top: 0;
+  transform: translateX(-50%);
+  background: url(../img/bg_wall.png) no-repeat center center;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------- */
+/* elevator */
+.elevator {
+  position: absolute;
+  left: 394px; bottom: 310px;
+}
+
+/* ---------------------------------------------------------------- */
+/* wood */
+.wood {
+  position: absolute;
+  left: 56px; bottom: 694px;
+  cursor: pointer;
+}
+
+.wood .click {
+  width: 40px;
+  height: 27px;
+  position: absolute;
+  left: 98px; bottom: 230px;
+  background: url(../img/wood_click.png);
+}
+
+.wood:hover .click {
+  animation: clickAni 1s infinite linear;
+}
+
+@keyframes clickAni {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(0,30px);
+  }
+}
+
+.comment .wood_comment {
+  position: absolute;
+  left: 31px; bottom: 499px;
+  display: none;
+}
+
+.comment .wood_comment p {
+  position: absolute;
+  left: 65px; bottom: 120px;
+}
+
+/* ---------------------------------------------------------------- */
+/* backbear */
+.backbear {
+  position: absolute;
+  left: 90px; bottom: 286px;
+  cursor: pointer;
+}
+
+.backbear .click {
+  width: 40px;
+  height: 27px;
+  position: absolute;
+  left: 75px; bottom: 280px;
+  background: url(../img/backbear_click.png);
+}
+
+.backbear:hover .click {
+  animation: clickAni 1s infinite linear;
+}
+
+.comment .backbear_comment {
+  position: absolute;
+  left: 40px; bottom: 350px;
+  display: none;
+}
+
+.comment .backbear_comment p {
+  position: absolute;
+  left: 95px; bottom: 160px;
+}
+
+/* ---------------------------------------------------------------- */
+/* pot_bear */
+.pot_bear .pot {
+  position: absolute;
+  left: 127px; bottom: 280px;
+}
+
+.pot_bear .leaf_back {
+  position: absolute;
+  left: 200px; bottom: 405px;
+}
+
+.pot_bear .ninjabear {
+  position: absolute;
+  left: 192px; bottom: 400px;
+  cursor: pointer;
+}
+
+.pot_bear .ninjabear:hover .click {
+  animation: clickAni 1s infinite linear;
+}
+
+.pot_bear .leaf_front {
+  position: absolute;
+  left: 116px; bottom: 383px;
+  cursor: pointer;
+}
+
+.pot_bear .leaf_front .click {
+  width: 30px;
+  height: 19px;
+  position: absolute;
+  left: 97px; bottom: 130px;
+  background: url(../img/ninjabear_click.png);
+}
+
+.pot_bear .leaf_front:hover .click {
+  animation: clickAni 1s infinite linear;
+}
+
+.comment .ninjabear_comment {
+  position: absolute;
+  left: 630px; bottom: 280px;
+  display: none;
+}
+
+.comment .ninjabear_comment p {
+  position: absolute;
+  left: 110px; bottom: 160px;
+}
+
+/* ---------------------------------------------------------------- */
+/* //.move */
+.move .move_front {
+  width: 446px;
+  height: 192px;
+  position: absolute;
+  left: 0; bottom: 190px;
+  background: url(../img/move1.png);
+  animation: moveFrontAni 10s infinite linear;
+}
+
+@keyframes moveFrontAni {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.move .move_back {
+  width: 232px;
+  height: 92px;
+  position: absolute;
+  right: 0; bottom: 240px;
+  background: url(../img/move2.png);
+  animation: moveBackAni 10s infinite linear;
+}
+
+@keyframes moveBackAni {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+
+
+/* ---------------------------------------------------------------- */
+/* //.honey */
+.honey {
+  position: absolute;
+  left: 762px; bottom: 268px;
+  cursor: pointer;
+}
+
+.honey .click {
+  width: 40px;
+  height: 27px;
+  position: absolute;
+  left: 175px; bottom: 430px;
+  background: url(../img/honey_click.png);
+}
+
+.honey:hover .click {
+  animation: clickAni 1s infinite linear;
+}
+
+.comment .honey_comment {
+  position: absolute;
+  left: 1440px; bottom: 500px;
+  display: none;
+}
+
+.comment .honey_comment p {
+  position: absolute;
+  left: 110px; bottom: 140px;
+}
+
+/* ---------------------------------------------------------------- */
+/* //.mainbear */
+.mainbear {
+  position: absolute;
+  left: 865px; bottom: 150px;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 1.5s, opacity 1.5s ease-in-out;
+}
+
+.mainbear img.arms {
+  position: absolute;
+  left: 68px; bottom: 70px;
+}
+
+.mainbear.on {
+  transform: translateX(-600px);
+  opacity: 0;
+}
+
+.mainbear.on img.arms {
+  animation: swingArmsAni 5s infinite linear; 
+}
+
+@keyframes swingArmsAni {
+  0% {
+    transform: rotate(32deg);
+  }
+
+  50% {
+    transform: rotate(-32deg);
+  }
+
+  100% {
+    transform: rotate(32deg);
+  }
+}
+
+.mainbear .mainbear_legs img {
+  position: absolute;
+  left: 50px; bottom: 12px;
+  z-index: -1;
+}
+
+.mainbear.on .mainbear_legs img {
+  transform-origin: top;
+  animation: swingLegsAni 1s infinite linear;
+}
+
+@keyframes swingLegsAni {
+  0% {
+    transform: rotate(6deg);
+  }
+
+  50% {
+    transform: rotate(-6deg);
+  }
+
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+.mainbear_shadow img {
+  position: absolute;
+  left: 10px; bottom: 0;
+  z-index: -2;
+}
+
+.mainbear .click {
+  width: 63px;
+  height: 42px;
+  position: absolute;
+  left: 75px; bottom: 380px;
+  background: url(../img/mainbear_click.png);
+}
+
+.mainbear:hover .click {
+  animation: clickAni 1s infinite linear;
+}
+
+/* ---------------------------------------------------------------- */
+.comment article {
+  display: none;
+}
+
+.comment article.on {
+  display: block;
+}
+
+.comment article .btn {
+  width: 50px; 
+  height: 50px; 
+  background: aqua;
+  border-radius: 50px;
+  cursor: pointer; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.comment article .btn:hover {
+  background: pink;
+}
+
+.comment article .btn span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.comment article.wood_comment .btn {
+  position: absolute; 
+  left: 150px; bottom: 30px;
+}
+
+.comment article.backbear_comment .btn {
+  position: absolute; 
+  left: 180px; bottom: 90px;
+}
+
+.comment article.ninjabear_comment .btn {
+  position: absolute; 
+  left: 220px; bottom: 90px;
+}
+
+.comment article.honey_comment .btn {
+  position: absolute; 
+  left: 180px; bottom: 60px;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
