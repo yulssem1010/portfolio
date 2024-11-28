@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/* 1400px */
+@media screen and (max-width:1400px) {
+    .inner {
+        width: 90%;
+    }
+
+    .sectors .list {
+        width: 90%;
+    }
+
+    .journal .list li {
+        width: 220px;
+    }
+
+    .journal .list li a .img {
+        height: 220px;
+    }
+}
+
+/* 1024px */
+@media screen and (max-width:1024px) {
+    .contents .visual .title {
+        font-size: 50px;
+    }
+
+    .about .inner .text p,
+    .text p {
+        font-size: 28px;
+    }
+
+    .approach .inner .list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .approach .inner .list li {
+        width: 48.5%;
+        margin-bottom: 20px;
+    }
+
+    .approach .inner .list li:last-child {
+        margin-bottom: 20px;
+    }
+
+    .approach .inner .fix {
+        position: static;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .approach .inner .fix .text {
+        position: static;
+    }
+
+    .approach .inner .fix .text.on {
+        position: static;
+        transform: none;
+    }
+
+    .approach .inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .approach .inner .list li a.on::after,
+    .approach .inner .list li a:hover::after {
+        display: none;
+    }
+    .approach .inner .list li a.on span,
+.approach .inner .list li a:hover span,
+.approach .inner li a span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.approach .inner .list li a.on span b,
+.approach .inner .list li a:hover span b,
+.approach .inner .list li a span b {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+.sectors{
+    padding: 100px 0 20%;
+    margin-bottom: 15%;
+}
+.sectors .list{
+    bottom: -18%;
+}
+.journal{
+    padding: 25%0 100px;
+}
+footer .inner {
+    flex-wrap: wrap;
+}
+footer .inner .footerLogo{
+    width: 100%;
+}
+.contents{
+    margin-bottom: 330px;
+}
+footer{
+    height: 330px;
+}
+footer .inner .contact{
+    width: 100%;
+    margin: 20px 0;
+}
+footer .inner .sns{
+    width: 100%;
+    justify-content: space-between;
+}
+footer .inner .sns li{
+    margin: 0;
+}
+}
+/* 768px */
+@media screen and (max-width:768px) {
+    .service .inner{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    .service .inner .img{
+        width: 100%;
+    }
+    .service .inner .text{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .service .inner .img{
+        padding: 30% 0 100px;
+    }
+    .journal .list {
+        flex-wrap: wrap;
+    }
+    .journal .list li{
+        width: 48.5%;
+        margin-bottom: 20px;
+    }
+    .journal .list li a .img{
+        height: auto;
+    }
+    .journal .list li a .img img{
+        width: 100%;
+        height: auto;
+        position: static;
+        transform: none;
+    }
+}
+@media screen and (max-width:500px){
+    header{
+        padding: 20px 0 18px;
+    }
+    header .inner .gnbBtn,header.on .inner .gnbBtn{
+        width: 22px;
+        margin-top: 5px;
+    }
+    header .inner .logo,header.on .inner .logo{
+        font-size: 18px;
+    }
+    header .inner .contact{
+        display: none;
+    }
+    nav.gnb.on, header.on nav.gnb{
+        width: 100%;
+        padding: 0;
+    }
+    nav.gnb ul, header.on nav.gnb ul{
+        width: 50%;
+    }
+    .contents .visual .title{
+        font-size: 32px;
+    }
+    .about .inner .text p, .text p{
+        font-size: 22px;
+    }
+    .about,.approach{
+        padding: 80px 0;
+    }
+    .approach .inner .list li{
+        width: 100%;
+    }
+    .sectors{
+        padding: 80px 0 85%;
+        margin-bottom: 120%;
+    }
+    .sectors .list{
+        flex-wrap: wrap;
+        bottom: -82%;
+    }
+    .sectors .list li{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .journal{
+        padding: 60% 0 80px;
+    }
+    .journal h2{
+        font-size: 25px;
+    }
+    .journal .list li{
+        width: 100%;
+    }
+    .journal .list li:nth-child(2)~*{
+        display: none;
+    }
+    footer{
+        height: 280px;
+        padding: 50px 0
+    }
+    footer .inner .footerLogo{
+        font-size: 35px;
+        text-align: center;
+    }
+    footer .inner .sns li{
+        font-size: 13px;
+    }
+    .contents{
+        margin-bottom: 280px;
+    }
+}

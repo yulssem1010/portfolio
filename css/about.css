@@ -1,0 +1,502 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italiana&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+    font-family: Fontone;
+    src: url(img/Beatrice-Regular.otf);
+}
+
+@font-face {
+    font-family: FontTwo;
+    src: url(../img/ElgocAlt-Medium.otf);
+}
+
+.en {
+    font-family: "Italiana", sans-serif;
+}
+
+.en2 {
+    font-family: "Cormorant Infant", serif;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.wrap {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+}
+
+/* layout */
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+header.active {
+    transform: translateY(-100%);
+}
+
+header .logo {
+    color: #fff;
+}
+
+header .menuOpen {
+    display: none;
+}
+
+.gnb ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.gnb ul li a {
+    display: block;
+}
+
+.gnb ul li a .char {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+    overflow: hidden;
+}
+
+.gnb ul li a .char::before,
+.gnb ul li a .char::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    color: #fff;
+    content: attr(data-char);
+    transition: transform 0.35s;
+    transition-delay: calc(30ms * var(--char-index));
+}
+
+.gnb ul li a .char::before {
+    transform: translateY(100%);
+}
+
+.gnb ul li a:hover .char:before {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.gnb ul li a:hover .char::after {
+    transform: translateY(-100%);
+}
+
+
+img {
+    vertical-align: top;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300vh;
+    background-color: #000;
+}
+
+main .img {
+    width: 100%;
+    height: auto;
+    transform-origin: top;
+}
+
+.imgOne {
+    margin-top: 25vh;
+}
+
+.imgTwo {
+    transform: perspective(1000px) rotateX(-90deg);
+}
+
+.imgThree {
+    transform: perspective(1000px) rotateX(-90deg);
+}
+
+main .img img {
+    width: 100%;
+}
+
+main .textAA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+}
+
+main .textAA h1 {
+    color: #fff;
+    font-family: FontTwo;
+    font-size: 11vw;
+    font-weight: 400;
+}
+
+main .overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #111111bf;
+    pointer-events: none;
+}
+
+/* con1 */
+
+.con1 {
+    width: 100%;
+    height: 100vh;
+    margin-top: 125px;
+    position: relative;
+    letter-spacing: -1px;
+}
+
+.con1 .mainTxt {
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0px 0px 0px 60px;
+    display: inline-block;
+}
+
+.con1 ul {
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+.con1 ul li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.con1 ul li p {
+    margin-bottom: 10px;
+    color: #888;
+}
+.con1 ul li p span{
+    color: #fff;
+}
+.con1 ul li:nth-child(2) {
+    flex-direction: column;
+    width: 40%;
+}
+
+.con1 ul li:nth-child(2) h2 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.con1 ul li img {
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* blackcircle */
+.blackcircle {
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blackcircle .circle {
+    display: block;
+    width: 2500px;
+    height: 2500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blackcircle .textBox {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+    font-style: normal;
+    z-index: 2;
+}
+
+.blackcircle .textBox h2 {
+    font-size: 64px;
+    letter-spacing: -3px;
+    line-height: 1.2;
+}
+.blackcircle .textBox h2 span{
+    font-size: 52px;
+    font-weight: normal;
+}
+.blackcircle .textBox h2 span.en{
+    font-size: 48px;
+}
+/* strength */
+.strength {
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+}
+.strength .inner{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.strength .inner .textBoxA{
+    width: 65%;
+    line-height: 1.4;
+}
+.strength .inner .textBoxA .title{
+    font-size: 100px;
+}
+.strength .inner .textBoxA .title .en2{
+    font-size: 150px;
+}
+.strength .inner .textBoxA .subtitle{
+    font-size: 28px;
+    margin: 30px 0;
+}
+.strength .inner .textBoxA .textA{
+    width: 70%;
+}
+.strength .inner .aniBox{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    margin-top: 300px;
+}
+.strength .inner .aniBox img{
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+}
+.strength .inner .aniBox img.spin{
+    left: 0;
+    top: 0;
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.strength .inner .aniBox img.arrow{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(180deg);
+    width: 20%;
+}
+/* motion animation */
+.strength.motion .inner .textBoxA{
+    transform: translate3d(0,0,0);
+}
+.strength.motion .inner .textBoxA p{
+    animation: textAni3 1s;
+}
+@keyframes textAni3 {
+    0%{opacity: 0;}
+    40%{opacity: 0;transform: translate3d(0,50px,0);}
+}
+/* work */
+.work{
+    height: 100vh;
+}
+.work ul {
+    display: flex;
+    padding: 3% 30%;
+    box-sizing: border-box;
+}
+.work ul li{
+    width: 700px;
+    padding: 100px;
+    box-sizing: border-box;
+    flex-shrink: 0!important;
+}
+.work ul li .box{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.work ul li .imgBox{
+    position: relative;
+}
+.work ul li .imgBox img{
+    width: 100%;
+    filter: brightness(50%);
+}
+.work ul li .box .textBoxB{
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    text-shadow: 2px 2px 10px rgba(0,0,0,.3);
+    color: #fff;
+}
+.work ul li .box .textBoxB .title{
+    font-size: 60px;
+    line-height: 1.2;
+}
+.work ul li .box .textBoxB .text{
+    font-size: 20px;
+    padding-left: 5px;
+}
+/* skill */
+.skill .title{
+    width: 100%;
+    height: 100vh;
+    font-size: 100px;
+    line-height: 0.9;
+    text-align: center;
+    padding-top: 30vh;
+    box-sizing: border-box;
+}
+.skill .title .b{
+    font-size: 120px;
+}
+.skill .content{
+    height: 100vh;
+    position: relative;
+}
+.skill .content h2{
+    font-size: 100px;
+    text-align: center;
+    height: auto;
+}
+.skill .content .myskill{
+    width: 100%;
+    display: flex
+}
+.skill .content .myskill ul{
+    flex: 1;
+}
+.skill .content .myskill ul.list{
+    width: 100%;
+    text-align: left;
+    font-size: 60px;
+    cursor: pointer;
+}
+.skill .content .myskill ul.list li{
+    padding-left: 150px;
+}
+.skill .content .myskill ul.list li.on{
+    background: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+.skill .content .myskill ul.description li{
+    display: none;
+}
+.skill .content .myskill ul.description li.on{
+    display: block;
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.skill .content .myskill ul.description li b{
+    font-size: 80px;
+}
+.skill .content .myskill ul.description li p span{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+/* footer */
+footer {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+footer .textWrap {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    padding: 0 60px;
+    box-sizing: border-box;
+    font-size: 160px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+footer .textWrap .title{
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+footer .textWrap .contact{
+    margin-bottom: 10px;
+    font-style: italic;
+}
+footer .textWrap a{
+    display: block;
+    margin-top: -30px;
+    font-size: 90px;
+}
+footer .textWrap .number{
+    font-size: 50px;
+    margin-top: 20px;
+    font-style: italic;
+}
+footer .bottom{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-sizing: border-box;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+footer .bottom .sns{
+    display: flex;
+}
+footer .bottom .sns li{
+    margin-right: 30px;
+}

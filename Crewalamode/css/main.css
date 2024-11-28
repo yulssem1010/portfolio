@@ -1,0 +1,631 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&display=swap');
+
+body {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.en {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* header */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #213135;
+    padding: 40px 0 25px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+
+header .inner {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .inner .logo {
+    display: inline-block;
+    font-size: 25px;
+    letter-spacing: 1px;
+    transition: all .4s;
+}
+
+header .inner .gnbBtn {
+    display: block;
+    width: 32px;
+    height: 12px;
+    position: relative;
+    margin-top: 10px;
+    transition: all .4s;
+    z-index: 200;
+}
+
+header .inner .gnbBtn span {
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+header .inner .gnbBtn span.a {
+    top: 0;
+}
+
+header .inner .gnbBtn span.b {
+    bottom: 0;
+}
+
+header .inner .contact {
+    display: block;
+    margin-top: 10px;
+    transition: all .4s;
+}
+
+/* contents */
+.contents {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 200px;
+}
+
+.contents .visual {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.contents .visual .waves {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.contents .visual .title {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+/* inner */
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.text .title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text p {
+    font-size: 35px;
+    line-height: 1.2;
+    margin: 40px 0;
+}
+
+.text a {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all .2s;
+}
+
+.text a:hover,
+.text a:focus {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #333;
+    border-radius: 0;
+    padding: 5px 18px;
+    transition: all .2s;
+    background: #f2f0eb;
+}
+
+.about {
+    background: #f2f0eb;
+    padding: 100px 0;
+}
+
+.about .inner .text p {
+    font-size: 45px;
+}
+
+/* section.approach */
+.approach {
+    padding: 100px 0;
+}
+
+.approach .inner {
+    position: relative;
+}
+
+.approach .inner .list {
+    width: 48%;
+}
+
+.approach .inner .list li {
+    margin-bottom: 30px;
+}
+
+.approach .inner .list li:last-child {
+    margin-bottom: 0;
+}
+
+.approach .inner .list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.approach .inner .list li a span {
+    display: none;
+}
+
+.approach .inner .list li a img {
+    width: 100%;
+}
+
+.approach .inner .fix {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+/* section.applorch -모션 */
+.approach .inner .list li a.on::after,
+.approach .inner .list li a:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(41, 41, 41, .3);
+}
+
+.approach .inner .list li a.on span,
+.approach .inner .list li a:hover span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.approach .inner .list li a.on span b,
+.approach .inner .list li a:hover span b {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+.approach .inner .fix .text {
+    position: absolute;
+    bottom: 10%;
+}
+
+.approach .inner .fix .text.on {
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+
+
+/* sectors */
+.sectors {
+    background: #f2f0eb;
+    padding: 100px 0 230px;
+    position: relative;
+    margin-bottom: 260px;
+}
+
+.sectors .list {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1400px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -160px;
+}
+
+.sectors .list li {
+    width: 31%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sectors .list li a {
+    display: block;
+    position: relative;
+}
+
+.sectors .list li a img {
+    width: 100%;
+    transition: all .4s;
+}
+
+.sectors .list li a h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .4s;
+}
+
+/* .sectors 모션 */
+.sectors .list li a:hover img,
+.sectors .list li a:focus img {
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+.sectors .list li a:hover h3,
+.sectors .list li a:focus h3 {
+    letter-spacing: 4px;
+    transition: all .5s;
+}
+
+.sectors .list.animate__motion li {
+    animation-name: sectors;
+    animation-duration: 1s;
+}
+
+.sectors .list.animate__motion li:nth-child(2) {
+    animation-duration: 1.15s;
+}
+
+.sectors .list.animate__motion li:nth-child(3) {
+    animation-duration: 1.3s;
+}
+
+@keyframes sectors {
+    0% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+}
+
+
+
+/* service */
+.service {
+    padding: 100px 0;
+}
+
+.service .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service .inner .img {
+    width: 48%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service .inner .img img {
+    width: 100%;
+}
+
+.service .inner .text {
+    width: 45%;
+}
+
+/* .service -motion */
+.service .inner .img.animate__motion {
+    animation-name: service;
+    animation-duration: 1s;
+}
+
+@keyframes service {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+}
+
+
+.service .inner .text a:hover,
+.service .inner .text:focus {
+    background: #fff;
+}
+
+/* journal */
+.journal {
+    background: #f2f0eb;
+    padding: 350px 0 200px;
+    margin-top: -250px;
+}
+
+/* journal */
+.journal h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.journal .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.journal .list li {
+    width: 330px;
+}
+
+.journal .list li a {
+    display: block;
+}
+
+.journal .list li a .img {
+    border-radius: 10px;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+}
+
+.journal .list li a .img img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.journal .list li a h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.journal .list li a p {
+    font-size: 16px;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    /* webkit-box만 적용하면 상자가 가로로 정렬 */
+    -webkit-line-clamp: 3;
+    /* 생략부호가 적용되는 라인 수 */
+    -webkit-box-orient: vertical;
+    /* 박스를 수직방향으로 배치 */
+    text-align: justify;
+}
+
+/* .journal -motion */
+.journal .list.animate__motion li {
+    animation-name: journal;
+    animation-duration: 0.5s;
+}
+
+.journal .list.animate__motion li:nth-child(2) {
+    animation-duration: 0.6s;
+}
+
+.journal .list.animate__motion li:nth-child(3) {
+    animation-duration: 0.7s;
+}
+
+.journal .list.animate__motion li:nth-child(4) {
+    animation-duration: 0.8s;
+}
+
+@keyframes journal {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+}
+
+/* footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: #213135;
+    color: #fff;
+    padding: 75px 0;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .inner .footerLogo {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer .inner .contact {
+    width: 30%;
+    line-height: 1.4;
+}
+
+footer .inner .sns {
+    display: flex;
+}
+
+footer .inner .sns li {
+    margin: 0 40px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+footer .inner .sns li:last-child {
+    margin-right: 0;
+}
+
+/* header 모션 */
+header.on {
+    padding: 20px 0 18px;
+    transition: all .4s;
+}
+
+header.on .logo {
+    font-size: 22px;
+    transition: all .4s;
+}
+
+header.on .gnbBtn,
+header.on .contact {
+    margin-top: 4px;
+    transition: all .4s;
+}
+
+/* 텍스트 애니메이션 */
+@keyframes textAni {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+}
+
+.visual .title.animate__motion .char {
+    animation: textAni 2s both;
+    animation-delay: calc(0.08s * var(--char-index));
+}
+/* text 공통 애니메이션 */
+.text.animate__motion .word{
+    animation: textAni 0.8s both;
+    animation-delay: calc(0.02s * var(--word-index));
+}
+.text.animate__motion a{
+    animation: border 1s both;
+}
+@keyframes border{
+    0%{border-color: transparent;}
+    60%{border-color: transparent;}
+}
+
+/* gnb */
+nav.gnb{
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    background: #000;
+    color: #fff;
+    width: 0;
+    height: 100vh;
+    padding: 95px 50px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+nav.gnb ul{
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    padding: 20px 0;
+}
+nav.gnb ul li a{
+    text-align: left;
+    line-height: 50px;
+    font-size: 22px;
+}
+nav.gnb ul li a span{
+    text-transform: none;
+    font-family: "Nanum Myeongjo", serif;
+    font-style: italic;
+    font-size: 20px;
+}
+/* header.on */
+header.on nav.gnb{
+    width: 300px;
+    transition: all 0.4s;
+}
+header.on nav.gnb ul{
+    width: 50%;
+}
+nav.gnb.on{
+    width: 400px;
+    left: 0;
+}

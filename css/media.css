@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+/* pc 1650~1301px */
+@media screen and (max-width:1650px) {
+    main .svgAni{
+        width: 700px;
+        height: 700px;
+        top: 35%;
+        right: -9%;
+    }
+    main .mainTxt{
+        font-size: 9vw;
+    }
+    .cloneWrap .contBox li.left a{
+        width: 70%;
+    }
+    .cloneWrap .contBox li.right{
+        padding: 170px 50px;
+    }
+    .con4 .inner{
+        width: 100%;
+    }
+    .con4 .inner ul.top{
+        font-size: 90px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .con4 .inner ul.top .en span{
+        font-size: 100px;
+    }
+    .con4 .inner ul.top li{
+        align-items: center;
+    }
+    .con6 .list{
+        width: 100%;
+    }
+    .txtaniBox2{
+        font-size: 8vw;
+        height: auto;
+    }
+}
+/* 1300px ~ 1025px */
+@media screen and (max-width:1300px) {
+    main .subTxt{
+        width: 35%;
+        margin-top:20%
+    }
+    main .subTxt .noto{
+        font-size: 15px;
+    }
+    main .svgAni{
+        width: 600px;
+    }
+    main .mainTxt{
+        margin: 150px 0 0 10%;
+    }
+    .con2 .title {
+        font-size: 11vw;
+    }
+    .cloneWrap .contBox li.right .tit{
+        font-size: 8vw;
+    }
+    .cloneWrap .contBox li.right .txtbox{
+        width: 100%;
+        font-size: 15px;
+    }
+    .con3 .inner{
+        width: 90%;
+    }
+    .con3 .slideBox{
+        width: 100%;
+    }
+    .con3 .slideBox .slide{
+        width: 100%;
+        right: -30%;
+    }
+    .con4 .inner ul.top{
+        font-size: 7vw;
+    }
+    .con4 .inner ul.top .en span{
+        font-size: 8vw;
+    }
+    .con4 .inner ul.top .img{
+        width: 50%;
+    }
+    .con4 .inner ul.top .img img{
+        width: 100%;
+    }
+    .con4 .inner ul.bottom{
+        font-size: 15px;
+    }
+    .con4 .inner ul.bottom li:nth-child(2) p span{
+        font-size: 14px;
+    }
+    
+    .txtaniBox2 .txtani1{
+        font-size: 8vw;
+    }
+    .con5 .textBox{
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 50px 0;
+    }
+    .con5 .textBox h2{
+        border-right: 0;
+    }
+    .con6{
+        margin: 50px 0;
+        height: auto;
+    }
+    .con6 .textbox{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .con6 .list{
+        padding: 100px 0;
+    }
+    footer .textWrap{
+        top: 20%;
+    }
+}
+/* 1024px~801px (1000) */
+@media screen and (max-width:1024px){
+    .con1 .title h2 {
+        font-size: 7vw;
+    }
+    .cloneWrap .contBox li.left a{
+        width: 80%;
+    }
+    .con3 .title{
+        font-size: 8vw;
+    }
+    .con3 .slideBox .slide .slick-dots{
+        left: -250px;
+    }
+    .con6 .textbox p{
+        border-left: 0;
+    }
+    footer .textWrap a {
+        font-size: 70px;
+    }
+}
+/* 800px~501px (600)*/
+@media screen and (max-width:800px){
+    .wrap{font-size: 16x;}
+    header{
+        padding: 3% 5%;
+    }
+    header .menuOpen{
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 10px;
+        transition: top 0.5s;
+        z-index: 101;
+    }
+    header .menuOpen span.a{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        transition: .3s;
+    }
+    header .menuOpen span.b{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        transition: .3s;
+    }
+    .gnb{
+        position: fixed;
+        width: 0%;
+        height: 0%;
+        overflow: hidden;
+        background: #fff;
+        left: 0;
+        top: -100%;
+        color: #000;
+        z-index: 100;
+        transition: top 0.5s;
+    }
+    .gnb ul {
+        display: block;
+        width: 80%;
+        margin: 20% auto;
+    }
+    .gnb ul li a{
+        font-size: 18vw;
+        line-height: 1.4;
+        letter-spacing: -1px;
+    }
+    .gnb ul li:nth-child(2) a{
+        font-family: "Cormorant Infant", serif;
+        font-style: italic;
+    }
+    .gnb ul li a .char{
+        color: #000;
+        overflow: inherit;
+    }
+    .gnb ul li a .char:before,.gnb ul li a .char::after{
+        display: none;
+    }
+    .gnb.on{
+        width: 100%;
+        height: 100vh;
+        top: 0;
+    }
+    body.on{
+        overflow: hidden;
+    }
+    header .menuOpen.on span.a{
+        background: #000;
+        transform: rotate(45deg) translate(5px,5px);
+    }
+    header .menuOpen.on span.b{
+        background: #000;
+        transform: rotate(-45deg) translate(2px,-1px);
+    }
+    main .svgAni{
+        width: 80%;
+    }
+    main .subTxt{
+        margin-left: 10%;
+        margin-top:5%;
+        width:52%
+    }
+    .cloneWrap .contBox{
+        flex-wrap: wrap;
+    }
+    .cloneWrap .contBox li.left{
+        width: 100%;
+        height: 50%;
+    }
+    .cloneWrap .contBox li.left a{
+        height: 100%;
+    }
+    .cloneWrap .contBox li.left a .img{
+        height: 100%;
+    }
+    .cloneWrap .contBox li.left a .img img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .cloneWrap .contBox li.right{
+        width: 100%;
+        height: 50%;
+        padding: 30px 50px;
+    }
+    .cloneWrap .contBox li.right .tit{
+        margin-bottom: 10px;
+    }
+    .cloneWrap .contBox li.right .txtbox .subdes{
+        display: none;
+    }
+    .cloneWrap::after {
+        display: none;
+    }
+    .con3 .slideBox .slide{
+        right: -50%;
+        top: 30%;
+    }
+    .con4{
+        height: auto;
+    }
+    .con4 .inner ul.top li{
+        flex-wrap: wrap-reverse;
+    }
+    .con4 .inner ul.top p{
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .con4 .inner ul.top .img{
+        width: 100%;
+        margin-top: none;
+    }
+    .con4 .inner ul.bottom{
+        flex-wrap: wrap;
+    }
+    .con4 .inner ul.bottom li{
+       flex: auto;
+    }
+    .con4 .inner ul.bottom li:nth-child(2){
+        padding-left: 0;
+    }
+    .con5 .textBox p{
+        font-size: 5vw;
+    }
+    footer .textWrap{
+        font-size: 10vw;
+        top: 30%;
+    }
+    footer .textWrap .contact{
+        margin-bottom: 50px;
+    }
+    footer .textWrap a{
+        font-size: 7vw;
+    }
+    footer .bottom{
+        font-size: 20px;
+    }
+}
